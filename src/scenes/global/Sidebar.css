@@ -1,0 +1,102 @@
+/* Sidebar container */
+.pro-sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #2c2f33;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: width 0.3s;
+  overflow-x: hidden;
+}
+
+/* Sidebar collapsed state */
+.pro-sidebar.collapsed {
+  width: 80px;
+}
+
+/* Inner sidebar styling */
+.pro-sidebar-inner {
+  background-color: #23272a;
+  padding: 10px 0;
+}
+
+/* Menu item styling */
+.pro-menu-item {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #b9bbbe;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.pro-menu-item:hover {
+  background-color: #7289da;
+  color: #fff;
+}
+
+.pro-menu-item.active {
+  background-color: #5865f2;
+  color: #fff;
+}
+
+/* Menu icon styling */
+.pro-menu-item .pro-icon-wrapper {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pro-menu-item .pro-icon-wrapper svg {
+  font-size: 20px;
+  color: inherit;
+}
+
+/* Menu item link styling */
+.pro-menu-item a {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  display: block;
+}
+
+/* User Profile styling */
+.pro-sidebar .profile-container {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.pro-sidebar .profile-container img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.pro-sidebar .profile-container .username {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.pro-sidebar .profile-container .role {
+  font-size: 14px;
+  color: #b9bbbe;
+}
+
+/* Transition when collapsed */
+.pro-sidebar-inner.collapsed .pro-menu-item {
+  justify-content: center;
+}
+
+.pro-sidebar-inner.collapsed .pro-menu-item .pro-icon-wrapper {
+  margin-right: 0;
+}
+
+.pro-sidebar-inner.collapsed .pro-menu-item .pro-title {
+  display: none;
+}

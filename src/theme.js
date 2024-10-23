@@ -128,15 +128,15 @@ export const tokens = (mode) => ({
             900: "#dbf2f2"
         }, // blue
         azulEscuro: {
-            100: "#081118",
-            200: "#0f2230",
-            300: "#173249",
-            400: "#1e4361",
-            500: "#265479",
-            600: "#517694",
-            700: "#7d98af",
-            800: "#a8bbc9",
-            900: "#d4dde4"
+          100: "#d0d6db",
+          200: "#a1adb8",
+          300: "#718594",
+          400: "#425c71",
+          500: "#13334d",
+          600: "#0f293e",
+          700: "#0b1f2e",
+          800: "#08141f",
+          900: "#040a0f"
         }, // blue dark
         amarelo: {
             100: "#322809",
@@ -186,78 +186,79 @@ export const tokens = (mode) => ({
 });
 
 export const themeSettings = (mode) => {
-    const colors = tokens(mode)
+    const colors = tokens(mode);
 
-    return{
+    return {
         palette: {
             mode: mode,
             ...(mode === 'dark'
-                ? {
+              ? {
                     primary: {
                         main: colors.azulEscuro[500],
                         light: colors.azulClaro[500],
                     },
-                    secundary: {
+                    secondary: {
                         main: colors.amarelo[500],
                     },
                     laranja: {
                         main: colors.laranja[500],
                     },
                     neutral: {
-                        dark: colors.grey[700],
-                        main: colors.grey[500],
-                        light: colors.grey[100]
+                        dark: colors.cinza[700],
+                        main: colors.cinza[500],
+                        light: colors.cinza[100],
                     },
-                    brackgroud: {
-                        default: colors.azulEscuro[500],
-                    }
-                } : {
+                    background: {
+                        default: colors.azulEscuro[800],
+                    },
+                }
+                : {
                     primary: {
                         main: colors.azulEscuro[500],
-                        light: colors.azulClaro[500],
+                        light: colors.azulClaro[200],
                     },
-                    secundary: {
+                    secondary: {
                         main: colors.amarelo[500],
                     },
                     laranja: {
                         main: colors.laranja[500],
                     },
                     neutral: {
-                        dark: colors.grey[700],
-                        main: colors.grey[500],
-                        light: colors.grey[100]
+                        dark: colors.cinza[700],
+                        main: colors.cinza[500],
+                        light: colors.cinza[100],
                     },
-                    brackgroud: {
-                        default: colors.branco[500],
+                    background: {
+                        default: colors.branco[400],
                     },
                 }
             ),
         },
         typography: {
-            fontFamily:  ["Montserrar", "sans-serif"].join(","),
+            fontFamily: ["Montserrat", "sans-serif"].join(","),
             fontSize: 12,
             h1: {
-                fontFamily: ["Montserrar", "sans-serif"].join(","),
+                fontFamily: ["Montserrat", "sans-serif"].join(","),
                 fontSize: 40,
             },
             h2: {
-                fontFamily: ["Montserrar", "sans-serif"].join(","),
+                fontFamily: ["Montserrat", "sans-serif"].join(","),
                 fontSize: 32,
             },
             h3: {
-                fontFamily: ["Montserrar", "sans-serif"].join(","),
+                fontFamily: ["Montserrat", "sans-serif"].join(","),
                 fontSize: 24,
             },
             h4: {
-                fontFamily: ["Montserrar", "sans-serif"].join(","),
+                fontFamily: ["Montserrat", "sans-serif"].join(","),
                 fontSize: 20,
             },
             h5: {
-                fontFamily: ["Montserrar", "sans-serif"].join(","),
+                fontFamily: ["Montserrat", "sans-serif"].join(","),
                 fontSize: 16,
             },
             h6: {
-                fontFamily: ["Montserrar", "sans-serif"].join(","),
+                fontFamily: ["Montserrat", "sans-serif"].join(","),
                 fontSize: 14,
             },
         },
@@ -266,7 +267,7 @@ export const themeSettings = (mode) => {
 
 //context for color mode
 export const ColorModeContext = createContext({
-    toggleColorMode: () => {}
+    toggleColorMode: () => {},
 });
 
 export const useMode = () => {
